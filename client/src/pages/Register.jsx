@@ -1,33 +1,36 @@
 import { Link } from 'react-router-dom';
 import { Logo } from '../components';
 import Wrapper from '../assets/wrappers/RegisterAndLoginPage';
+import { FormRow } from '../components';
 const Register = () => {
   return (
     <Wrapper>
       <form className="form">
         <Logo />
         <h4>Register</h4>
-        <div className="form-row">
-          <label htmlFor="name" className="form-label">
-            <input
-              type="text"
-              id="name"
-              name="name"
-              className="form-input"
-              defaultValue="yazan"
-              required
-            />
-          </label>
-          <button type="submit" className="btn btn-block">
-            Submit
-          </button>
-          <p>
-            Already a member?
-            <Link to="/login" className="member-btn">
-              Login
-            </Link>
-          </p>
-        </div>
+        <FormRow type={'text'} name={'name'} defaultValue={'Yazan'} />
+        <FormRow
+          type={'text'}
+          name={'lastName'}
+          labelText={'last name'}
+          defaultValue={'Alshoubaki'}
+        />
+        <FormRow type={'text'} name={'location'} defaultValue={'earth'} />
+        <FormRow
+          type={'email'}
+          name={'email'}
+          defaultValue={'yazan@gmail.com'}
+        />
+        <FormRow type={'password'} name={'password'} defaultValue={'123456'} />
+        <button type="submit" className="btn btn-block">
+          Submit
+        </button>
+        <p>
+          Already a member?
+          <Link to="/login" className="member-btn">
+            Login
+          </Link>
+        </p>
       </form>
     </Wrapper>
   );
