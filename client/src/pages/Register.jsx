@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
-import { Logo } from '../components';
+import { Logo, FormRow } from '../components';
 import Wrapper from '../assets/wrappers/RegisterAndLoginPage';
-import { FormRow } from '../components';
 const Register = () => {
   return (
     <Wrapper>
