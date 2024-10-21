@@ -1,9 +1,6 @@
 import Wrapper from '../assets/wrappers/BigSidebar';
-import { useDashboardContext } from '../pages/DashboardLayout';
-const BigSidebar = () => {
-  const data = useDashboardContext();
-  console.log(data);
 
+const BigSidebar = () => {
   return <Wrapper>BigSideBar</Wrapper>;
 };
 
